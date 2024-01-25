@@ -55,9 +55,6 @@ class _CounterPageState extends State<CounterPage> {
           children: [
             FloatingActionButton(onPressed: (){setState(() {
               counter =10;
-            }); },child: const Icon(Icons.youtube_searched_for_sharp)),
-            FloatingActionButton(onPressed: (){setState(() {counter =100;
-              
             }); },child:const Icon(Icons.access_alarm_outlined) ,),
             const Text(
               "Counter:",
@@ -75,6 +72,7 @@ class _CounterPageState extends State<CounterPage> {
           add_counter();
         },
         child: const Icon(Icons.add),
+
       ),
       
       
