@@ -9,7 +9,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return const MaterialApp(
       home: CounterPage(""),
     );
@@ -22,7 +21,6 @@ class CounterPage extends StatefulWidget {
   @override
   State<CounterPage> createState() => _CounterPageState();
 }
-
 @override
 class _CounterPageState extends State<CounterPage> {
   int counter = 0;
@@ -34,6 +32,7 @@ class _CounterPageState extends State<CounterPage> {
     });
   }
 
+  // ignore: non_constant_identifier_names
   void sub_counter()
     {
       setState(() {
@@ -62,8 +61,8 @@ class _CounterPageState extends State<CounterPage> {
             ),
             Text(
               '$counter',
-              style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-            ),
+              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            ),            
           ],
         ),
       ),
