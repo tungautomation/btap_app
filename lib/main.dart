@@ -87,7 +87,6 @@ class _CounterPageState extends State<CounterPage> {
             ),
             Text("Giá trị tính theo hàm mũ  ${counter}^${number_add}: = ${mul}"),
             OutlinedButton(onPressed: (){setState(() {
-              mul = 1;
                 for(int i = 1;i<=number_add;i++)
                 {
 
