@@ -25,7 +25,7 @@ class _CounterPageState extends State<CounterPage> {
   int counter = 0;
   // ignore: non_constant_identifier_names
   int number_add = 0;
- int mul = 0;
+ int mul = 1;
   //ignore: non_constant_identifier_names
   void add_counter() {
     setState(() {
@@ -90,7 +90,12 @@ class _CounterPageState extends State<CounterPage> {
             ),
             Text("Giá trị tính theo hàm mũ  ${counter}^${number_add}: = ${mul}"),
             OutlinedButton(onPressed: (){setState(() {
+              mul = 1;
+                for(int i = 2;i<number_add;i++)
+                {
 
+                    mul*=counter;
+                }
             });},child: Text('Tính'),)
           ],
         ),
