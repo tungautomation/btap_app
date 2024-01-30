@@ -93,6 +93,7 @@ class _CounterPageState extends State<CounterPage> {
 
                     mul*=counter;
                 }
+                if(number_add == 0){mul = 1;}
             });},child: const Text('Tính'),)
           ],
         ),
