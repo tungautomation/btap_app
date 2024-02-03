@@ -73,7 +73,15 @@ class _CounterPageState extends State<CounterPage> {
                 decoration: const InputDecoration(labelText: "Nhập vào số nguyên n :",border: OutlineInputBorder()),
                 onChanged: (valueee){setState(() 
                 {
-                  number_add =int.parse(valueee);
+                  try 
+                  {
+                    number_add =int.parse(valueee);
+                  } 
+                  catch(e)
+                  {
+                    number_add = 0;
+                  }
+                  
                 });},
               ),
             ),
@@ -87,9 +95,10 @@ class _CounterPageState extends State<CounterPage> {
             ),
             Text("Giá trị tính theo hàm mũ  ${counter}^${number_add}: = ${mul}"),
             OutlinedButton(onPressed: (){setState(() {
+                  mul = 1;
                 for(int i = 1;i<=number_add;i++)
                 {
-
+                    
                     mul*=counter;
                 }
                 if(number_add == 0){mul = 1;}
